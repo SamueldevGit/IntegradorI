@@ -70,9 +70,16 @@
                 <!--loguin-->
 
                 <a href="login.html" class="btn btn-primary my-2 my-sm-0 ml-2 active" role="button" aria-pressed="true">Login</a>
-                 
                
             <!--fim login-->
+                
+            <!--inicio carrinho-->
+                
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalExemplo">
+                  <span class="fas fa-shopping-cart" aria-hidden="true"></span>
+                </button>
+                
+            <!--fim carrinho-->
           </div>
         </nav>
       </header>
@@ -537,6 +544,51 @@
           <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
         </p>
       </footer>
+      <!--modal carrinho-->
+      <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Carrinho</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+              </div>
+              <div class="modal-body">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Produto</th>
+                      <th scope="col">Unidades</th>
+                      <th scope="col">Valor</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Budweiser</td>
+                      <td>2</td>
+                      <td>R$10,00</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Heineken</td>
+                      <td>1</td>
+                      <td>R$6,00</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="text-left" style="margin-right: 40px; font-size: 20px; margin-left: 10px">Total: R$16,00</p>
+              </div>
+              <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-success">Finalizar Compra</button>
+              </div>
+          </div>
+        </div>
+    </div>
+    <!--fim modal carrinho-->
     </main>
 
     <!-- Bootstrap core JavaScript
@@ -557,5 +609,6 @@
     <script src="./dist/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="./assets/js/vendor/holder.min.js"></script>
+    <script src="https://kit.fontawesome.com/eacd8f5d6d.js" crossorigin="anonymous"></script>      
   </body>
 </html>
