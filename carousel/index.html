@@ -1,346 +1,561 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="../../../../favicon.ico" />
 
     <title>Carousel Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
     <!-- <link href="./assets/css/login.css" rel="stylesheet"> -->
-    <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Custom styles for this template -->
-    <link href="carousel.css" rel="stylesheet">
-    <link href="./assets/css/login.css" rel="stylesheet">
+    <link href="carousel.css" rel="stylesheet" />
+    <link href="./assets/css/login.css" rel="stylesheet" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <img id="logo" src="./assets/img/logos/logoSVG.svg">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+          <div class="container">
+            <img id="logo" src="./assets/img/logos/logoSVG.svg" />
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
             </button>
-
+  
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Categorias</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Destaques</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Voltar ao topo</a>
-                    </li>
-                </ul>
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"
+                    >Home <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Categorias</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Destaques</a>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Voltar ao topo</a>
+                </li>
+              </ul>
+              <div class="form d-flex flex-row">
+                 
                 <!-- barra de pesquisa -->
-                <form class="form-inline" style="margin-right: 10px;">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline my-2 my-sm-0" type="submit" &nbsp;
-                        style="background-color: gray; color: white;">Buscar</button>
+                
+                <form class="form d-flex flex-row my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                    Buscar
+                  </button>
                 </form>
-
+  
                 <!--loguin-->
-                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
-                    <img src="./assets/img/icon_logo.jpeg" alt="Girl in a jacket" style="width: 30px; height: 30px;">
-                </button>
-                <div id="id01" class="modal">
-                    <form class="modal-content animate" action="/action_page.php" method="post">
-                        <div class="imgcontainer">
-                            <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                                title="Close Modal">&times;</span>
-                            <img src="./assets/img/icon_logo.jpeg" alt="Avatar" class="avatar">
-                        </div>
-                        <div class="container">
-                            <label for="uname"><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" name="uname" required>
-                            <label for="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" required>
-                            <button type="submit">Login</button>
-                            <label>
-                                <input type="checkbox" checked="checked" name="remember"> Remember me
-                            </label>
-                        </div>
-                        <span class="psw">Forgot <a href="#">password?</a></span>
-                    </form>
-                </div>
-            </div>
+
+                <a href="login.html" class="btn btn-primary my-2 my-sm-0 ml-2 active" role="button" aria-pressed="true">Login</a>
+                 
+               
             <!--fim login-->
+          </div>
         </nav>
-    </header>
+      </header>
 
     <main role="main">
-
-        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin: 0 auto">
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-            <!--inicio div imagens carrossel-->
-            <div class="w-100 carousel-inner">
-                <div id="imagem1" class="carousel-item active">
-                    <!-- <img class="first-slide" src="./assets/img/bannercervejateste.jpg" alt="First slide">-->
-                    <div class="container">
-                        <div class="carousel-caption text-left">
-                            <h1>Example headline.</h1>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                                gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div id="imagem2" class="carousel-item">
-                    <!--<img class="second-slide" src="./assets/img/bannercervejateste.jpg" alt="Second slide">-->
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Another example headline.</h1>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                                gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div id="imagem3" class="carousel-item">
-                    <!--<img class="third-slide" src="./assets/img/bannercervejateste.jpg" alt="Third slide">-->
-                    <div class="container">
-                        <div class="carousel-caption text-right">
-                            <h1>One more for good measure.</h1>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                                gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--fim div imagens carrossel-->
-            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-
-        <div class="album py-5 bg-light">
+      <div
+        id="myCarousel"
+        class="carousel slide"
+        data-ride="carousel"
+        style="margin: 0 auto"
+      >
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!--inicio div imagens carrossel-->
+        <div class="w-100 carousel-inner">
+          <div id="imagem1" class="carousel-item active">
+            <!-- <img class="first-slide" src="./assets/img/bannercervejateste.jpg" alt="First slide">-->
             <div class="container">
-                <section style="display: inline-flex;">
-                    <img src="./assets/img/bars-solid.svg" alt="fav"
-                        style="height: 20px;width: 20px; margin-top: 6px; margin-right: 3px;">
-                    <h1 style="margin-bottom: 10px; font-family: Open Sans Condensed,sans-serif; font-size: 30px">
-                        Categorias</h1>
-                </section>
-
-                <div class="row">
-                    <div class="col col-lg-2 col-md-4 col-6">
-                        <div class="card" style="margin-bottom: 20px; height: 250px; width: 160px;">
-                            <img src="./assets/img/cerveja bud.jpg" class="card-img-top" alt="..."
-                                style="height: 170px;">
-                            <div class="card-body" style="text-align: center;">
-                                <h5 class="card-title">Pilsen</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col col-lg-2 col-md-4 col-6">
-                        <div class="card" style="margin-bottom: 20px; height: 250px; width: 160px;">
-                            <img src="./assets/img/cerveja bud.jpg" class="card-img-top" alt="..."
-                                style="height: 170px;">
-                            <div class="card-body" style="text-align: center;">
-                                <h5 class="card-title">IPA</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col col-lg-2 col-md-4 col-6">
-                        <div class="card" style="margin-bottom: 20px; height: 250px; width: 160px;">
-                            <img src="./assets/img/cerveja bud.jpg" class="card-img-top" alt="..."
-                                style="height: 170px;">
-                            <div class="card-body" style="text-align: center;">
-                                <h5 class="card-title">Weizenbier</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col col-lg-2 col-md-4 col-6">
-                        <div class="card" style="margin-bottom: 20px; height: 250px; width: 160px;">
-                            <img src="./assets/img/cerveja bud.jpg" class="card-img-top" alt="..."
-                                style="height: 170px;">
-                            <div class="card-body" style="text-align: center;">
-                                <h5 class="card-title">Lager</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col col-lg-2 col-md-4 col-6">
-                        <div class="card" style="margin-bottom: 20px; height: 250px; width: 160px;">
-                            <img src="./assets/img/cerveja bud.jpg" class="card-img-top" alt="..."
-                                style="height: 170px;">
-                            <div class="card-body" style="text-align: center;">
-                                <h5 class="card-title">Brahma</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col col-lg-2 col-md-4 col-6">
-                        <div class="card" style="margin-bottom: 20px; height: 250px; width: 160px;">
-                            <img src="./assets/img/cerveja bud.jpg" class="card-img-top" alt="..."
-                                style="height: 170px;">
-                            <div class="card-body" style="text-align: center;">
-                                <h5 class="card-title">Ricos</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div id="destaques">
-                    <section style="display: inline-flex;">
-                        <img src="./assets/img/bars-solid.svg" alt="fav"
-                            style="height: 20px;width: 20px; margin-top: 6px; margin-right: 3px;">
-                        <h1 style="margin-bottom: 10px; font-family: Open Sans Condensed,sans-serif; font-size: 30px">
-                            Destaques</h1>
-                    </section>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top" src="./assets/img/img-cerva-1.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Este é um card maior e que suporta texto abaixo, como uma
-                                    introdução mais natural ao conteúdo adicional.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top" src="./assets/img/fotoimag1.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Este é um card maior e que suporta texto abaixo, como uma
-                                    introdução mais natural ao conteúdo adicional.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top" src="./assets/img/img-cerva-1.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Este é um card maior e que suporta texto abaixo, como uma
-                                    introdução mais natural ao conteúdo adicional.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top" src="./assets/img/img-cerva-1.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Este é um card maior e que suporta texto abaixo, como uma
-                                    introdução mais natural ao conteúdo adicional.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top" src="./assets/img/img-cerva-1.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Este é um card maior e que suporta texto abaixo, como uma
-                                    introdução mais natural ao conteúdo adicional.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top" src="./assets/img/img-cerva-1.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Este é um card maior e que suporta texto abaixo, como uma
-                                    introdução mais natural ao conteúdo adicional.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
+              <div class="carousel-caption text-left">
+                <h1>Example headline.</h1>
+                <p>
+                  Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                  Donec id elit non mi porta gravida at eget metus. Nullam id
+                  dolor id nibh ultricies vehicula ut id elit.
+                </p>
+                <p>
+                  <a class="btn btn-lg btn-primary" href="#" role="button"
+                    >Sign up today</a
+                  >
+                </p>
+              </div>
             </div>
+          </div>
+          <div id="imagem2" class="carousel-item">
+            <!--<img class="second-slide" src="./assets/img/bannercervejateste.jpg" alt="Second slide">-->
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Another example headline.</h1>
+                <p>
+                  Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                  Donec id elit non mi porta gravida at eget metus. Nullam id
+                  dolor id nibh ultricies vehicula ut id elit.
+                </p>
+                <p>
+                  <a class="btn btn-lg btn-primary" href="#" role="button"
+                    >Learn more</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="imagem3" class="carousel-item">
+            <!--<img class="third-slide" src="./assets/img/bannercervejateste.jpg" alt="Third slide">-->
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h1>One more for good measure.</h1>
+                <p>
+                  Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                  Donec id elit non mi porta gravida at eget metus. Nullam id
+                  dolor id nibh ultricies vehicula ut id elit.
+                </p>
+                <p>
+                  <a class="btn btn-lg btn-primary" href="#" role="button"
+                    >Browse gallery</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+        <!--fim div imagens carrossel-->
+        <a
+          class="carousel-control-prev"
+          href="#myCarousel"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#myCarousel"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
 
-        <hr class="featurette-divider">
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <section style="display: inline-flex">
+            <img
+              src="./assets/img/bars-solid.svg"
+              alt="fav"
+              style="
+                height: 20px;
+                width: 20px;
+                margin-top: 6px;
+                margin-right: 3px;
+              "
+            />
+            <h1
+              style="
+                margin-bottom: 10px;
+                font-family: Open Sans Condensed, sans-serif;
+                font-size: 30px;
+              "
+            >
+              Categorias
+            </h1>
+          </section>
 
-        <!-- FOOTER -->
-        <footer class="container">
-            <p class="float-right"><a href="#myCarousel">Subir ao topo!</a></p>
-            <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
-            </p>
-        </footer>
+          <div class="row">
+            <div class="col col-lg-2 col-md-4 col-6">
+              <div
+                class="card"
+                style="margin-bottom: 20px; height: 250px; width: 160px"
+              >
+                <img
+                  src="./assets/img/cerveja bud.jpg"
+                  class="card-img-top"
+                  alt="..."
+                  style="height: 170px"
+                />
+                <div class="card-body" style="text-align: center">
+                  <h5 class="card-title">Pilsen</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col col-lg-2 col-md-4 col-6">
+              <div
+                class="card"
+                style="margin-bottom: 20px; height: 250px; width: 160px"
+              >
+                <img
+                  src="./assets/img/cerveja bud.jpg"
+                  class="card-img-top"
+                  alt="..."
+                  style="height: 170px"
+                />
+                <div class="card-body" style="text-align: center">
+                  <h5 class="card-title">IPA</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col col-lg-2 col-md-4 col-6">
+              <div
+                class="card"
+                style="margin-bottom: 20px; height: 250px; width: 160px"
+              >
+                <img
+                  src="./assets/img/cerveja bud.jpg"
+                  class="card-img-top"
+                  alt="..."
+                  style="height: 170px"
+                />
+                <div class="card-body" style="text-align: center">
+                  <h5 class="card-title">Weizenbier</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col col-lg-2 col-md-4 col-6">
+              <div
+                class="card"
+                style="margin-bottom: 20px; height: 250px; width: 160px"
+              >
+                <img
+                  src="./assets/img/cerveja bud.jpg"
+                  class="card-img-top"
+                  alt="..."
+                  style="height: 170px"
+                />
+                <div class="card-body" style="text-align: center">
+                  <h5 class="card-title">Lager</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col col-lg-2 col-md-4 col-6">
+              <div
+                class="card"
+                style="margin-bottom: 20px; height: 250px; width: 160px"
+              >
+                <img
+                  src="./assets/img/cerveja bud.jpg"
+                  class="card-img-top"
+                  alt="..."
+                  style="height: 170px"
+                />
+                <div class="card-body" style="text-align: center">
+                  <h5 class="card-title">Brahma</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col col-lg-2 col-md-4 col-6">
+              <div
+                class="card"
+                style="margin-bottom: 20px; height: 250px; width: 160px"
+              >
+                <img
+                  src="./assets/img/cerveja bud.jpg"
+                  class="card-img-top"
+                  alt="..."
+                  style="height: 170px"
+                />
+                <div class="card-body" style="text-align: center">
+                  <h5 class="card-title">Ricos</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="destaques">
+            <section style="display: inline-flex">
+              <img
+                src="./assets/img/bars-solid.svg"
+                alt="fav"
+                style="
+                  height: 20px;
+                  width: 20px;
+                  margin-top: 6px;
+                  margin-right: 3px;
+                "
+              />
+              <h1
+                style="
+                  margin-bottom: 10px;
+                  font-family: Open Sans Condensed, sans-serif;
+                  font-size: 30px;
+                "
+              >
+                Destaques
+              </h1>
+            </section>
+          </div>
 
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img
+                  class="card-img-top"
+                  src="./assets/img/img-cerva-1.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Este é um card maior e que suporta texto abaixo, como uma
+                    introdução mais natural ao conteúdo adicional.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Ver
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Editar
+                      </button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img
+                  class="card-img-top"
+                  src="./assets/img/fotoimag1.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Este é um card maior e que suporta texto abaixo, como uma
+                    introdução mais natural ao conteúdo adicional.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Ver
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Editar
+                      </button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img
+                  class="card-img-top"
+                  src="./assets/img/img-cerva-1.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Este é um card maior e que suporta texto abaixo, como uma
+                    introdução mais natural ao conteúdo adicional.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Ver
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Editar
+                      </button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img
+                  class="card-img-top"
+                  src="./assets/img/img-cerva-1.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Este é um card maior e que suporta texto abaixo, como uma
+                    introdução mais natural ao conteúdo adicional.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Ver
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Editar
+                      </button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img
+                  class="card-img-top"
+                  src="./assets/img/img-cerva-1.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Este é um card maior e que suporta texto abaixo, como uma
+                    introdução mais natural ao conteúdo adicional.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Ver
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Editar
+                      </button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img
+                  class="card-img-top"
+                  src="./assets/img/img-cerva-1.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Este é um card maior e que suporta texto abaixo, como uma
+                    introdução mais natural ao conteúdo adicional.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Ver
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Editar
+                      </button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider" />
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-right"><a href="#myCarousel">Subir ao topo!</a></p>
+        <p>
+          &copy; 2017-2018 Company, Inc. &middot;
+          <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+        </p>
+      </footer>
     </main>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="./assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="./assets/js/vendor/jquery-slim.min.js"><\/script>'
+        );
+    </script>
     <script src="./assets/js/vendor/popper.min.js"></script>
     <script src="./dist/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="./assets/js/vendor/holder.min.js"></script>
-</body>
-
+  </body>
 </html>
